@@ -17,7 +17,6 @@ session = boto3.Session(
 )
 s3 = session.resource('s3')
 s3_objects = {}
-local_objects = {}
 
 bucket = s3.Bucket(BUCKET_NAME)
 for obj in bucket.objects.all():
